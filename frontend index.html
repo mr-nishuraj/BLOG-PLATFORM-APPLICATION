@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Platform</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        rel="stylesheet"
+    >
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1><i class="fa-solid fa-blog"></i> Blog Platform</h1>
+
+            <div class="user-section">
+                <span id="welcomeUser">Guest</span>
+
+                <button id="logoutBtn" class="btn danger">
+                    Logout
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Auth Section -->
+    <section id="authSection" class="container">
+
+        <div class="auth-container">
+
+            <!-- Register -->
+            <div class="card">
+                <h2>Create Account</h2>
+
+                <form id="registerForm">
+
+                    <input
+                        type="text"
+                        id="registerUsername"
+                        placeholder="Username"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="Email"
+                        required
+                    >
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Password"
+                        required
+                    >
+
+                    <button class="btn primary">
+                        Register
+                    </button>
+
+                </form>
+            </div>
+
+            <!-- Login -->
+            <div class="card">
+
+                <h2>Login</h2>
+
+                <form id="loginForm">
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Email"
+                        required
+                    >
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Password"
+                        required
+                    >
+
+                    <button class="btn success">
+                        Login
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Create Post -->
+    <section id="createPostSection" class="container hidden">
+
+        <div class="card">
+
+            <h2>Create New Blog Post</h2>
+
+            <form id="postForm">
+
+                <input
+                    type="text"
+                    id="postTitle"
+                    placeholder="Post Title"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="postCategory"
+                    placeholder="Category"
+                >
+
+                <input
+                    type="text"
+                    id="postTags"
+                    placeholder="Tags (comma separated)"
+                >
+
+                <input
+                    type="text"
+                    id="postImage"
+                    placeholder="Image URL"
+                >
+
+                <textarea
+                    id="postContent"
+                    rows="8"
+                    placeholder="Write your blog content..."
+                    required
+                ></textarea>
+
+                <button class="btn primary">
+                    Publish Post
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="container">
+
+        <h2 class="section-title">
+            Latest Blog Posts
+        </h2>
+
+        <div id="postsContainer">
+
+            <!-- Posts Render Here -->
+
+        </div>
+
+    </section>
+
+    <!-- Post Details Modal -->
+    <div id="postModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close-btn" id="closeModal">
+                &times;
+            </span>
+
+            <div id="modalBody"></div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Blog Platform |
+            Full Stack MERN Project
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
